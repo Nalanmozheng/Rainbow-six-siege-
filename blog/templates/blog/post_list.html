@@ -7,18 +7,14 @@
             <h1><a href="/">Rbsix Blog</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-            <p>公開日：2021/01/04,18:00</p>
-            <h2><a href="">1番目投稿</a></h2>
-            <p>今年度の第一目のキャラクターは来ました！！<br/>
-            ------------------------------------------------</p>
+            <p>published：{{post.published_date}}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
         </div>
+        {% endfor %}
 
-        <div>
-            <p>公開日：2021/01/04,18:01</p>
-            <h2><a href="">2番目投稿</a></h2>
-            <p>今年度の第二目のキャラクターは来ました！！<br/>
-            ------------------------------------------------</p>
-        </div>
+       
     </body>
 </html>
